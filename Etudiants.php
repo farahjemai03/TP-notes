@@ -13,7 +13,12 @@ foreach ($notes as $nom => $valeur){
 //Calculer et afficher la moyenne de la classe avec array_sum
 $somme = array_sum($notes);
 $nombreEtudiants = count($notes);
-$moyenne = $somme/$nombreEtudiants;
+
+function calculerMoyenne ($somme, $nombreEtudiants){
+    return $somme/$nombreEtudiants;
+}
+
+$moyenne = calculerMoyenne($somme, $nombreEtudiants);
 
 echo "La moyenne de la classe = $moyenne<br>";
 
